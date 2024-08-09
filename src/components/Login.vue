@@ -23,6 +23,7 @@ import { ElMessage } from 'element-plus';
 import 'element-plus/es/components/message/style/css';
 import CaptchaComponent from './CaptchaComponent.vue';
 import CryptoJS from 'crypto-js';
+import router from '@/router';
 
 export default {
   components: {
@@ -73,6 +74,7 @@ export default {
               const token = response.data;
               localStorage.setItem('token', token);
               ElMessage.success('Login successful');
+              router.push('/menu');
               // 处理登录成功逻辑
           } else {
               ElMessage.error('Login failed');
