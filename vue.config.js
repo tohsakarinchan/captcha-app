@@ -7,12 +7,22 @@ module.exports = defineConfig({
       "/gen":{
         target: 'http://localhost:8080',
         changeOrigin: true,
-        pathRewrite: { '^/api': '' }
+        //pathRewrite: { '^/api': '' }
       },
       "/check":{
         target: 'http://localhost:8080',
         changeOrigin: true,
-        pathRewrite: { '^/api': '' }
+        //pathRewrite: { '^/api': '' }
+      },
+      "/login":{
+        target: 'http://localhost:8080',
+        changeOrigin: true,
+        pathRewrite: { '^/login': '/api/login' }
+      },
+      "/protected": {
+        target: 'http://localhost:8080',
+        changeOrigin: true,
+        pathRewrite: { '^/protected': '/api/protected' }
       }
     }
   }

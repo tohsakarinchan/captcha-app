@@ -1,20 +1,26 @@
 <template>
-  <div>
-    <Captcha/>
+  <div id="app">
+    <!--
+    <nav>
+      <router-link to="/">Login</router-link>
+      <router-link to="/protected">Protected Page</router-link>
+    </nav>
+    -->
+    <router-view/>
   </div>
 </template>
 
 <script>
-import Captcha from './components/CaptchaComponent.vue';
-
 export default {
   name: 'App',
-  components: {
-    Captcha,
-  },
 };
 </script>
 
 <style>
-/* Add your styles here */
+nav {
+  margin-bottom: 10px;
+}
+nav a {
+  margin-right: 10px;
+}
 </style>
