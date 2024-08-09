@@ -71,7 +71,7 @@ export default {
               userPassword: CryptoJS.MD5(formLogin.password).toString()
           });
           if (response.status === 200) {
-              const token = response.data;
+              const token = response.data.token;
               localStorage.setItem('token', token);
               ElMessage.success('Login successful');
               router.push('/menu');

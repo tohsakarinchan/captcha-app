@@ -24,12 +24,12 @@ export default {
       }
 
       try {
-        const response = await axios.get('/api/protected', {
+        const response = await axios.get('/protected', {
           headers: {
             'Authorization': `Bearer ${token}`
           }
         });
-        console.log('Protected data:', response.data);
+        console.log(response);
         
       } catch (error) {
         if (error.response && error.response.status === 401) {
